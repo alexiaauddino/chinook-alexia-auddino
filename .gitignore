@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
@@ -127,3 +128,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS Code IDE stuff
+.vscode/
+
+.DS_Store
+sqlite-dll-win64-x64-3310100
