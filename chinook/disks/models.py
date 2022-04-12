@@ -26,5 +26,5 @@ class Track(models.Model):
     composer = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.composer if self.composer else "No composer"
+        return self.name #composer if self.composer else "No composer"
     
