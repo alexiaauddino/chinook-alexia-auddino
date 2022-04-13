@@ -1,0 +1,11 @@
+<h1> Listes des albums disponibles </h1>
+
+{% if album_list %}
+    <ul>
+    {% for album in album_list %}
+        <li><a href="/disks/{{ album.id }}/">{{ album.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No album are available.</p>
+{% endif %}

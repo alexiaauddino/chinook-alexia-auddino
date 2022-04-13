@@ -1,0 +1,29 @@
+<h1> Listes des tracks : {{ album}} </h1>
+
+{% if album%}
+    <table>
+    <thead>
+        <tr>
+            <th> Titre </th>
+            <th> Auteurs </th>
+            <th> Durée </th>
+            <th> Prix </th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for track in track_list %}
+            <tr>
+                <td>{{ track.name }}</td>
+                <td>{{ track.composer }}</td>
+                <td>{{ track.milliseconds }} ms </td>
+                <td>{{ track.unitPrice }} $ </td>
+            </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% else %}
+    <p>No track are available.</p>
+{% endif %}
+
+<h4><a href="/disks/">Retour à la liste des albums</a></h4>
+
