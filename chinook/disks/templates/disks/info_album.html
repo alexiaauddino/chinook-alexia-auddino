@@ -1,3 +1,9 @@
+<header class="page-header">
+    <div class="container">
+        <h1><a href="/">Django Disks App</a></h1>
+    </div>
+</header>
+
 <h1> Listes des tracks : {{ album}} </h1>
 
 {% if album%}
@@ -26,4 +32,8 @@
 {% endif %}
 
 <h4><a href="/disks/">Retour à la liste des albums</a></h4>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'disks/style.css' %}">
 
