@@ -26,13 +26,22 @@
               <th scope="row"> </th>
               <th scope="col"> Albums </th>
           </tr>
-      </thead>   
+      </thead> 
+      <tbody>  
       {% if search %} 
         {% for album in album_list %}
             {% if search|lower in album.title|lower %}
                 <tr>
                     <th scope="row"> </th>
                     <td><a href="/disks/{{ album.id }}/">{{ album.title }}</a></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        {% for track in track_list %}
+            {% if search|lower in track.name|lower %}
+                <tr>
+                    <th scope="row"> </th>
+                    <td><a href="/disks/{{ track.album_id }}/">{{ track.album }}</a></td>
                 </tr>
             {% endif %}
         {% endfor %}
@@ -47,7 +56,7 @@
       </tbody>
       </table>
     {% else %}
-        <p>No album are available.</p>
+        <p> No album are available.</p>
     {% endif %}
   </div>
 

@@ -12,8 +12,10 @@ def index(request):
     if request.method == 'GET': # If the form is submitted
         search = request.GET.get('search', None)
         album_list = Album.objects.order_by('title')[:]
+        track_list = Track.objects.order_by('name')[:]
         context = {
             'album_list': album_list,
+            'track_list': track_list,
             'search' : search,
         }
     else:
